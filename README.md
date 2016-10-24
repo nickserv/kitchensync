@@ -1,4 +1,6 @@
 # Kitchen Sync
+[![Build Status](https://travis-ci.org/nickmccurdy/kitchensync.svg?branch=master)](https://travis-ci.org/nickmccurdy/kitchensync)
+
 An aggregated package manager for installing packages globally.
 
 This is currently a prototype implemented as a bash script. I might port it to another scripting language for better Windows support.
