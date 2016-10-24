@@ -1,16 +1,16 @@
-#!/usr/bin/env bash
+#!/usr/bin/env python
+import glob, os, sys
 
-command_for_manager() {
-  install_command=install
-  if [ "$manager" = 'npm' ]; then
-    install_command='install --global'
-  fi
-  echo "$1" $install_command
-}
+def command_for_manager(manager):
+    install_command = 'install'
+    if manager == 'npm':
+        install_command = 'install --global'
+    return '{} {}'.format(manager, install_command)
 
-directory=${1-packages}
-for file in $directory/*.txt; do
-  basename=$(basename "$file")
-  manager=${basename%.*}
-  xargs echo $(command_for_manager "$manager") < "$file"
-done
+directory = sys.argv[1] if len(sys.argv) == 2 else 'packages'
+
+for file in glob.glob(os.path.join(directory, '*.txt')):
+    basename = os.path.basename(file)
+    manager = os.path.splitext(basename)[0]
+    packages = open(file).read().split()
+    print('{} {}'.format(command_for_manager(manager), ' '.join(packages)))
