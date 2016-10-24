@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+command_for_manager() {
+  install_command=install
+  if [ "$manager" = 'npm' ]; then
+    install_command='install --global'
+  fi
+  echo "$1" $install_command
+}
+
+directory=${1-packages}
+for file in $directory/*.txt; do
+  basename=$(basename "$file")
+  manager=${basename%.*}
+  xargs echo $(command_for_manager "$manager") < "$file"
+done
