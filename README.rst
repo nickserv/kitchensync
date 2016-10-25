@@ -29,6 +29,6 @@ Goals
 Testing
 -------
 
-1. Make sure you're using a Unix/Linux system with Python installed.
-2. ``pip install -r requirements.txt``
+1. Make sure you're using a Unix/Linux system with Python and an up to date version of pip installed.
+2. ``pip install .[test]``
 3. ``cram tests``
