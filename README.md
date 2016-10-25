@@ -13,4 +13,4 @@ Note that this tool is designed for setting up user software and development too
 ## Testing
 1. Make sure you're using a Unix/Linux system with Python installed.
 2. Install cram with `pip install cram` or `easy_install cram`.
-3. Run `cram kitchen.t`.
+3. Run `cram tests`.
