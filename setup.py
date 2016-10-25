@@ -3,7 +3,8 @@ import setuptools
 setuptools.setup(
     name='kitchensync',
     version='0.1',
-    description='An aggregated package manager for installing packages globally.',
+    description='An aggregated package manager for installing packages '
+                'globally.',
     long_description=open('README.rst').read(),
     url='https://github.com/nickmccurdy/kitchensync',
     author='Nick McCurdy',

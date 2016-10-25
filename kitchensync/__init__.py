@@ -1,4 +1,7 @@
-import glob, os, sys
+import glob
+import os
+import sys
+
 
 def command_for_manager(manager):
     install_command = 'install'
@@ -6,9 +9,9 @@ def command_for_manager(manager):
         install_command = 'install --global'
     return '{} {}'.format(manager, install_command)
 
+
 def main():
     directory = sys.argv[1] if len(sys.argv) == 2 else 'packages'
-
     for file in glob.glob(os.path.join(directory, '*.txt')):
         basename = os.path.basename(file)
         manager = os.path.splitext(basename)[0]
