@@ -2,6 +2,7 @@ Kitchen Sync
 ============
 .. image:: https://travis-ci.org/nickmccurdy/kitchensync.svg?branch=master
     :target: https://travis-ci.org/nickmccurdy/kitchensync
+
 An aggregated package manager for installing packages globally.
 
 This is currently a prototype implemented as a Python package for versions 2.7 and 3.5. Mac and Windows should be supported in theory, but they haven't been tested yet.
