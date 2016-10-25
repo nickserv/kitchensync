@@ -6,7 +6,7 @@ Kitchen Sync
 
 An aggregated package manager for installing packages globally.
 
-This is currently a prototype implemented as a bash script. I might port it to another scripting language for better Windows support.
+This is currently a prototype implemented as a Python package for versions 2.7 and 3.5. Mac and Windows should be supported in theory, but they haven't been tested yet.
 
 Concept
 -------
