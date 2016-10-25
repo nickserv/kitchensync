@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 import glob, os, sys
 
 def command_for_manager(manager):
@@ -15,6 +14,3 @@ def main():
         manager = os.path.splitext(basename)[0]
         packages = open(file).read().split()
         print('{} {}'.format(command_for_manager(manager), ' '.join(packages)))
-
-if __name__ == '__main__':
-    main()
