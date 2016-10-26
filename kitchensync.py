@@ -4,6 +4,7 @@ import sys
 
 INSTALL_OPTIONS = {
     'npm': ['--global'],
+    'pacaur': ['-S'],
     'pacman': ['-S']
 }
 
