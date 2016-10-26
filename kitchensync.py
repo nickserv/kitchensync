@@ -2,13 +2,17 @@ import glob
 import os
 import sys
 
+INSTALL_OPTIONS = {
+    'npm': ['--global'],
+    'pacman': ['-S']
+}
+
 
 def install_command(path):
     manager = os.path.splitext(os.path.basename(path))[0]
-    options = ['--global'] if manager == 'npm' else []
     with open(path) as f:
         packages = f.read().split()
-    return [manager, 'install'] + options + packages
+    return [manager, 'install'] + INSTALL_OPTIONS.get(manager, []) + packages
 
 
 def install_commands(directory):
