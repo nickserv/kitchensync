@@ -32,7 +32,7 @@ setuptools.setup(
         'Topic :: Utilities'
     ],
     keywords='installation package management',
-    packages=['kitchensync'],
+    packages=['.'],
     # install_requires=[''],
     extras_require={'test': 'cram'},
     entry_points={'console_scripts': 'kitchen=kitchensync:main'},
