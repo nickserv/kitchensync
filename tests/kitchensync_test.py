@@ -14,7 +14,8 @@ class KitchenSyncTest(unittest.TestCase):
     def test_install_commands(self):
         self.assertEqual(kitchensync.install_commands(PACKAGES_PATH), [
             ['gem', 'install', 'bundler', 'rails'],
-            ['npm', 'install', '--global', 'grunt-cli', 'mocha']
+            ['npm', 'install', '--global', 'grunt-cli', 'mocha'],
+            ['pacman', '-S', 'python']
         ])
 
     @unittest.skip('pending')

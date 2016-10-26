@@ -2,3 +2,4 @@
   $ kitchen
   gem install bundler rails
   npm install --global grunt-cli mocha
+  pacman -S python

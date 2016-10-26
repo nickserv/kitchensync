@@ -3,7 +3,7 @@ import os
 import sys
 
 INSTALL_OPTIONS = {
-    'npm': ['--global'],
+    'npm': ['install', '--global'],
     'pacaur': ['-S'],
     'pacman': ['-S']
 }
@@ -13,7 +13,7 @@ def install_command(path):
     manager = os.path.splitext(os.path.basename(path))[0]
     with open(path) as f:
         packages = f.read().split()
-    return [manager, 'install'] + INSTALL_OPTIONS.get(manager, []) + packages
+    return [manager] + INSTALL_OPTIONS.get(manager, ['install']) + packages
 
 
 def install_commands(directory):
