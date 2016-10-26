@@ -36,5 +36,6 @@ setuptools.setup(
     # install_requires=[''],
     extras_require={'test': 'cram'},
     entry_points={'console_scripts': 'kitchen=kitchensync:main'},
+    test_suite="tests",
     zip_safe=False
 )
