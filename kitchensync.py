@@ -3,16 +3,17 @@ import os
 import sys
 
 
-def install_command(file):
-    manager = os.path.splitext(os.path.basename(file))[0]
+def install_command(path):
+    manager = os.path.splitext(os.path.basename(path))[0]
     options = ['--global'] if manager == 'npm' else []
-    packages = open(file).read().split()
+    with open(path) as f:
+        packages = f.read().split()
     return [manager, 'install'] + options + packages
 
 
 def install_commands(directory):
-    files = glob.glob(os.path.join(directory, '*.txt'))
-    return list(map(install_command, files))
+    paths = glob.glob('{}/*.txt'.format(directory))
+    return list(map(install_command, paths))
 
 
 def main():
