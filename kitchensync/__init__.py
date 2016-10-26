@@ -12,7 +12,7 @@ def install_command(file):
 
 def install_commands(directory):
     files = glob.glob(os.path.join(directory, '*.txt'))
-    return map(install_command, files)
+    return list(map(install_command, files))
 
 
 def main():
